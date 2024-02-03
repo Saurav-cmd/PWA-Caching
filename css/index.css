@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d1d1d1;
+}
+
+.app-shell {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #d1d1d1;
+}
+
+.form_div{
+    width: 45%;
+}
+
+.song_list_main_div{
+    width: 45%;
+}
+
+ .app-shell-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-shell #music_app_txt {
+    text-align: center;
+    color: #1e90ff;
+}
+
+.new_song_div {
+    background: #1e90ff;
+    color: white;
+    display: flex;
+    align-items: center; 
+    margin-top: 3%;
+}
+    
+
+.new_song_div h1 {
+    font-size: 3vh;
+    font-weight: 500;
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+#music_app_txt img{
+    width: 10%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+form label{
+    margin-top: 2%;
+}
+
+form input{
+    margin-top: 1%;
+    margin-bottom: 4%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+form button{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: white;
+    font-size: 3vh;
+    margin-top: 2%;
+}
+
+p{
+    margin:0;
+    margin-bottom: 1%;
+    font-size: 2vh;
+}
+
+
+@media screen and (max-width: 700px)  {
+    .app-shell {
+        max-width: 100%;
+        max-height: 100%;
+        background-color: #d1d1d1;
+    }
+
+    .app-shell-child{
+        display: block;
+    }
+    
+    .app-shell #music_app_txt {
+        text-align: center;
+        color: #1e90ff;
+    }
+    .form_div{
+        width: 100%;
+    }
+
+    .song_list_main_div{
+        width: 100%;
+    }
+    
+    .new_song_div {
+        background: #1e90ff;
+        color: white;
+        display: flex;
+        align-items: center; 
+        margin-top: 3%;
+    }
+        
+    
+    .new_song_div h1 {
+        font-size: 3vh;
+        font-weight: 500;
+        margin: 0;
+        padding-left: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    
+    #music_app_txt img{
+        width: 10%;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    form label{
+        margin-top: 2%;
+    }
+    
+    form input{
+        margin-top: 1%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    form button{
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;
+        width: 30%;
+        background-color: #1e90ff;
+        border: none;
+        border-radius: 5px;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        color: white;
+        font-size: 3vh;
+        margin-top: 2%;
+    }
+
+    p{
+        margin:0;
+        margin-bottom: 1%;
+        font-size: 2vh;
+    }
+  }

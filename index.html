@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <h1 id="music_app_txt">
+            <img src="./assets/musical-note.png" alt="Music Icon"> My Music App
+        </h1>
+        <div class="app-shell-child">
+           <div class="form_div">
+            <div class="new_song_div">
+                <h1>New Songs</h1> 
+            </div>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                <p id="titleError"></p>
+
+                <label for="artist">Artist:</label>
+                <input type="text" id="artist" required>
+                <p id="artistError"></p>
+                
+                <button type="button" onclick="addSong()">Add</button>
+            </form>
+           </div>
+    
+           <div class="song_list_main_div">
+            <div class="new_song_div" id="songList">
+                <h1>List of Songs</h1>
+            </div>
+    
+            <div id="songsListContainer"></div>
+           </div>
+        </div>
+       
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
