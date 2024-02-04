@@ -31,7 +31,7 @@ self.addEventListener('install', (event) => {
 });
 
 
-//his is on activate event it will get something from the thing we cached
+//this is on activate event it will get something from the thing we cached
 self.addEventListener('activate', (event) => {
 
     console.log('Activated service worker', event);
@@ -52,14 +52,21 @@ self.addEventListener('activate', (event) => {
 
 });
 
-//This will receives all the cached assets like the images, html, css, js
+//This will receives all the cached assets like the images, html, css, js also help to show changes done in our html or css
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.open(cacheName)
-        .then(async (cache) => {
-            const response = await cache.match(event.request);
-            return response || fetch(event.request);
-        })
-);
+    event.respondWith(
+        caches.open(cacheName)
+            .then((cache) => {
+                return cache.match(event.request)
+                .then((cacheResponse) => {
+                    const fetchedResponse = fetch(event.request)
+                    .then((networkResponse) => {
+                        cache.put(event.request, networkResponse.clone());
+                        return networkResponse;
+                    });
+                    return cacheResponse || fetchedResponse;
+                })
+            })
+    );
 });
 
