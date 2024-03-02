@@ -137,7 +137,7 @@ function displaySongs(songList) {
       likeButton.addEventListener('click', () => {
         musicDb.addLike(music.id,music.likes)
          .then(()=>{
-          likeContainer.innerHTML = `Likes: <strong>${music.likes++ + 1}</strong><br>`;
+          likeContainer.innerHTML = `<strong>Likes: ${music.likes++ + 1}</strong><br>`;
          }).catch((error)=>{console.log('Error Occurred when add like: ', error)});
       });
       
