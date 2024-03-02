@@ -100,7 +100,7 @@ function displaySongs(songList) {
       songElementDiv.style.paddingBottom = '3%';
       songElementDiv.innerHTML = `<strong>${music.title}</strong><br>${music.singer} `;
       
-      likeContainer.innerHTML = `Likes: <strong>${music.likes}</strong><br>`;
+      likeContainer.innerHTML = `<strong>Likes: ${music.likes}</strong><br>`;
 
       songElementDiv.append(likeContainer);
 
